@@ -1,0 +1,70 @@
+.login_content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.login_banner {
+  margin-top: 50px;
+}
+.login_form {
+  h1 {
+    color: var(--color-darkblue);
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  h3 {
+    color: var(--color-lightblue);
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .form {
+    width: 600px;
+    p {
+      font-size: 16px;
+      color: var(--color-green);
+      font-weight: 600;
+      line-height: 16.39px;
+      margin-bottom: 31px;
+    }
+    button {
+      width: 80%;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+      background-color: var(--color-green);
+      color: white;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease-in;
+      &:hover {
+        background-color: var(--color-darkblue);
+      }
+    }
+    .form_group {
+      position: relative;
+      margin: 31px 0;
+      width: 80%;
+      padding: 10px;
+      border: 1px solid rgba(84, 95, 125, 0.15);
+      border-radius: 5px;
+      .form_control {
+        border: none;
+        outline: none;
+        width: 90%;
+        background: transparent;
+      }
+      .toggle_icon {
+        position: absolute;
+        top: -1;
+        right: -1;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--color-green);
+        cursor: pointer;
+      }
+    }
+  }
+}

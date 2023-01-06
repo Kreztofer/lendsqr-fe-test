@@ -1,0 +1,121 @@
+.navbar {
+  padding: 30px;
+  background-color: #fff;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(84, 95, 125, 0.05);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.02);
+  .nav_left {
+    display: flex;
+    width: 65%;
+    align-items: center;
+    gap: 150px;
+    .logo {
+      margin-top: 8px;
+    }
+    .search_group {
+      position: relative;
+      padding-top: 12px;
+      width: 400px;
+      padding-bottom: 15px;
+      padding-left: 12px;
+      border: 1px solid rgba(84, 95, 125, 0.15);
+      border-radius: 8px;
+      display: flex;
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+      .search_icon {
+        position: absolute;
+        padding-top: 12px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 13px;
+        background-color: var(--color-green);
+        right: 0;
+        top: 0;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .logo {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .search_group {
+        width: 250px;
+      }
+    }
+  }
+  .nav_right {
+    .docs {
+      font-weight: 400;
+      text-decoration: underline;
+    }
+    p {
+      font-size: 16px;
+      color: var(--color-darkblue);
+    }
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+    .profile {
+      border-radius: 50%;
+    }
+    .drop {
+      display: flex;
+      align-items: center;
+      margin-right: 6px;
+      img {
+        margin-left: 5px;
+        margin-top: 5px;
+      }
+      .name {
+        font-weight: 500;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+  .show_sidebar {
+    display: none;
+    @media screen and (max-width: 1024px) {
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
+// /* ----------MEDIA QUERIES(MEDIUM DEVICES)------------ */
+// @media screen and (max-width: 1024px) {
+//   .logo {
+//     display: none;
+//   }
+//   .nav_right {
+//     img {
+//       display: none;
+//     }
+//     p {
+//       display: none;
+//     }
+//   }
+//   .show_sidebar {
+//     display: flex;
+//   }
+// }
+// /* -----------MEDIA QUEREIS (SMALL DEVICES)--------- */
+// @media screen and (max-width: 600px) {
+//   .container {
+//     width: var(--container-width-sm);
+//   }
+//   section > h2 {
+//     margin-top: 2rem;
+//   }
+// }
