@@ -9,7 +9,8 @@ const App = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!userContext?.user) navigate('/Main');
+    if (!userContext?.user) navigate('/');
+    console.log(userContext?.user);
   }, []);
 
   return (

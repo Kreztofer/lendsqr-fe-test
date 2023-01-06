@@ -7,8 +7,6 @@ import bell from '../../assets/bell.png';
 import ham from '../../assets/harmburger.png';
 import './navbar.scss';
 import { useStateContext } from '../../context/StateContext';
-import { RxHamburgerMenu } from 'react-icons/rx';
-import ToggleSidebar from '../ToggleSidebar/ToggleSidebar';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {

@@ -1,4 +1,4 @@
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import pablo from '../../assets/pablosign.png';
 import logo from '../../assets/logo.png';
@@ -6,13 +6,14 @@ import './login.scss';
 import { useStateContext } from '../../context/StateContext';
 
 const Login = () => {
-  const userContext= useStateContext();
+  const userContext = useStateContext();
   const [type, setType] = useState('password');
   const [icon, setIcon] = useState('SHOW');
 
   const handleUserLogin = () => {
     localStorage.setItem('login', 'logged');
-    userContext?.setUser(localStorage.getItem('login')??'');
+    userContext?.setUser(localStorage.getItem('login')!);
+    console.log(localStorage.getItem('login'));
   };
   const handleToggle = () => {
     if (type === 'password') {
@@ -24,7 +25,7 @@ const Login = () => {
     }
   };
   const navigate = useNavigate();
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     navigate('/Main');
   };
@@ -35,7 +36,7 @@ const Login = () => {
       </div>
       <div className="login_content">
         <div className="login_banner">
-          <img src={pablo} alt="banner" width={600} />
+          <img src={pablo} alt="banner" />
         </div>
         <div className="login_form">
           <h1>Welcome!</h1>

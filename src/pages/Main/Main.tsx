@@ -33,11 +33,8 @@ const Main = () => {
 
   useEffect(() => {
     if (localStorage.getItem('profile')) {
-      console.log('part 1');
-
       setMyData(JSON.parse(localStorage.getItem('profile')!));
     } else {
-      console.log('part 2');
       axios
         .get('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users')
         .then((response) => {
