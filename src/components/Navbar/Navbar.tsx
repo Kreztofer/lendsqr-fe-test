@@ -12,15 +12,15 @@ import ToggleSidebar from '../ToggleSidebar/ToggleSidebar';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const userContext= useStateContext();
-  const handleSubmit = (e:any) => {
+  const userContext = useStateContext();
+  const handleSubmit = (e: any) => {
     e.preventDefault();
   };
   return (
     <nav className="navbar">
       <div className="nav_left">
         <div className="logo">
-          <Link to="/">
+          <Link to="/Main">
             <img src={logo} alt="logo" />
           </Link>
         </div>
