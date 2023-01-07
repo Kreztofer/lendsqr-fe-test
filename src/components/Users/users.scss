@@ -84,6 +84,7 @@
   }
   .content-table td {
     padding: 15px;
+    margin-bottom: 5px;
   }
   .content-table tbody tr {
     border-bottom: 1px solid rgba(33, 63, 125, 0.1);
@@ -97,6 +98,43 @@
     font-weight: 400;
     line-height: 16px;
     color: var(--color-lightblue);
+  }
+  .content-table td.pending {
+    color: rgba(233, 178, 0, 1);
+    background-color: rgba(233, 178, 0, 0.1);
+    margin-right: 15px;
+    padding: 10px 15px 10px 19px;
+    margin-top: 4px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .content-table td.blacklist {
+    color: rgba(228, 3, 59, 1);
+    background-color: rgba(228, 3, 59, 0.1);
+    margin-right: 15px;
+    padding: 10px 14px 10px 20px;
+    margin-top: 4px;
+    border-radius: 50px;
+    display: flex;
+  }
+  .content-table td.active {
+    color: rgba(57, 205, 98, 1);
+    background-color: rgba(57, 205, 98, 0.1);
+    margin-right: 15px;
+    padding: 10px 20px;
+    margin-top: 4px;
+    border-radius: 50px;
+    display: flex;
+  }
+  .content-table td.inactive {
+    color: rgba(84, 95, 125, 1);
+    background-color: rgba(84, 95, 125, 0.1);
+    margin-right: 15px;
+    padding: 10px 20px;
+    margin-top: 4px;
+    border-radius: 50px;
+    display: flex;
   }
   .page_bottom {
     display: flex;
@@ -195,7 +233,6 @@
   }
 }
 //end of users
-
 .modal_dots {
   position: relative;
 }
@@ -207,7 +244,7 @@
   border-radius: 8px;
   right: 3px;
   top: 45px;
-  z-index: 10;
+  z-index: 100;
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 500;

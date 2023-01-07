@@ -8,16 +8,16 @@ import { useNavigate } from 'react-router-dom';
 import Form from '../Form/Form';
 import { UserObj } from '../../models/UserObj';
 
-interface props{
-  datax:UserObj[]
+interface props {
+  datax: UserObj[];
 }
 
-const Users = (datax:props) => {
+const Users = (datax: props) => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [id, setId] = useState('');
   const [status, setStatus] = useState('pending');
-  const [statusStyle, setStatusStyle] = useState('');
+  const [statusStyle, setStatusStyle] = useState('pending');
   const [showForm, setShowForm] = useState(false);
   const [filter, setFilter] = useState(10);
 
@@ -32,29 +32,29 @@ const Users = (datax:props) => {
     setPageCount(Math.ceil(100 / itemsPerPage));
   }, [itemOffset, itemsPerPage, datax]);
 
-  const handlePageClick = (event:any) => {
+  const handlePageClick = (event: any) => {
     const newOffset = (event.selected * itemsPerPage) % 100;
     setItemOffset(newOffset);
   };
 
-  const handleDotsClick = (e:any, id:string) => {
+  const handleDotsClick = (e: any, id: string) => {
     e.stopPropagation();
     setOpen((prev) => !prev);
     setId(id);
   };
 
-  const DateConverter = (date:Date) => {
+  const DateConverter = (date: Date) => {
     return new Date(date).toLocaleString('en-us', {
       dateStyle: 'medium',
       timeStyle: 'short',
     });
   };
 
-  const handleModalSelect = (value:string, myid:string) => {
+  const handleModalSelect = (value: string, myid: string) => {
     if (value === 'View Details') {
-      navigate(`/users/${id}`);
+      navigate(`users/${id}`);
     } else if (value === 'Blacklist User' && myid === id) {
-      setStatus('Blacklist');
+      setStatus('Blacklisted');
       setStatusStyle('blacklist');
     } else if (value === 'Activate User' && myid === id) {
       setStatus('Active');
@@ -107,7 +107,7 @@ const Users = (datax:props) => {
                   <td>{item?.email}</td>
                   <td>{item?.phoneNumber}</td>
                   <td>{DateConverter(item?.createdAt)}</td>
-                  <td>pending</td>
+                  <td className={`${statusStyle}`}>{status}</td>
                   <td
                     className="modal_dots"
                     onClick={(e) => handleDotsClick(e, item?.userName)}
@@ -151,7 +151,7 @@ const Users = (datax:props) => {
               <select
                 className="selector"
                 value={filter}
-                onChange={(e:any) => setFilter(e.target.value)}
+                onChange={(e: any) => setFilter(e.target.value)}
               >
                 <option>10</option>
                 <option>50</option>
