@@ -15,7 +15,7 @@
   }
   .users_flex {
     display: flex;
-    gap: 70px;
+    gap: 30px;
     flex-wrap: wrap;
     .users_box {
       background-color: #fff;
@@ -83,8 +83,8 @@
     padding: 15px;
   }
   .content-table td {
-    padding: 15px;
     margin-bottom: 5px;
+    padding: 15px;
   }
   .content-table tbody tr {
     border-bottom: 1px solid rgba(33, 63, 125, 0.1);
@@ -103,7 +103,7 @@
     color: rgba(233, 178, 0, 1);
     background-color: rgba(233, 178, 0, 0.1);
     margin-right: 15px;
-    padding: 10px 40px;
+    padding: 10px 0px 10px 20px;
     margin-top: 4px;
     border-radius: 50px;
     display: flex;
@@ -113,7 +113,7 @@
     color: rgba(228, 3, 59, 1);
     background-color: rgba(228, 3, 59, 0.1);
     margin-right: 15px;
-    padding: 10px 0px 10px 33px;
+    padding: 10px 10px 10px 10px;
     margin-top: 4px;
     border-radius: 50px;
     display: flex;
@@ -122,7 +122,7 @@
     color: rgba(57, 205, 98, 1);
     background-color: rgba(57, 205, 98, 0.1);
     margin-right: 15px;
-    padding: 10px 0px 10px 50px;
+    padding: 10px 0px 10px 25px;
     margin-top: 4px;
     border-radius: 50px;
     display: flex;
@@ -131,7 +131,7 @@
     color: rgba(84, 95, 125, 1);
     background-color: rgba(84, 95, 125, 0.1);
     margin-right: 15px;
-    padding: 10px 0px 10px 45px;
+    padding: 10px 0px 10px 20px;
     margin-top: 4px;
     border-radius: 50px;
     display: flex;

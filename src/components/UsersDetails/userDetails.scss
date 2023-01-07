@@ -136,59 +136,61 @@
     padding-bottom: px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-left: 30px;
-    padding-right: 30px;
     box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.02);
-    .personal {
-      color: var(--color-darkblue);
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 19px;
-    }
-    .pad {
-      margin-top: 30px;
-    }
-    .user_personal {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      column-gap: 50px;
-      row-gap: 40px;
-      margin-top: 30px;
-      padding-bottom: 30px;
-      border-bottom: 1px solid rgba(33, 63, 125, 0.1);
-      .head {
-        color: var(--color-lightblue);
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-      }
-      .desc {
+    .info {
+      padding-left: 30px;
+      padding-right: 30px;
+      .personal {
+        color: var(--color-darkblue);
         font-size: 16px;
         font-weight: 500;
         line-height: 19px;
-        color: var(--color-lightblue);
-        margin-top: 15px;
       }
-    }
-    .user_personal2 {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      column-gap: 10px;
-      row-gap: 50px;
-      margin-top: 30px;
-      padding-bottom: 30px;
-      .head {
-        color: var(--color-lightblue);
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
+      .pad {
+        margin-top: 30px;
       }
-      .desc {
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 19px;
-        color: var(--color-lightblue);
-        margin-top: 15px;
+      .user_personal {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 50px;
+        row-gap: 40px;
+        margin-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+        .head {
+          color: var(--color-lightblue);
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14px;
+        }
+        .desc {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 19px;
+          color: var(--color-lightblue);
+          margin-top: 15px;
+        }
+      }
+      .user_personal2 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 10px;
+        row-gap: 50px;
+        margin-top: 30px;
+        padding-bottom: 30px;
+        .head {
+          color: var(--color-lightblue);
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14px;
+        }
+        .desc {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 19px;
+          color: var(--color-lightblue);
+          margin-top: 15px;
+        }
       }
     }
   }

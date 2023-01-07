@@ -213,49 +213,51 @@ const UserDetails = () => {
         </div>
       </div>
       <div className="user_info">
-        <p className="personal">Personal Information</p>
-        <div className="user_personal">
-          {PERSONALDETAILS?.map((item, i) => (
-            <div key={i}>
-              <p className="head">{item?.head}</p>
-              <p className="desc">{item?.desc}</p>
-            </div>
-          ))}
-        </div>
-        <p className="personal pad">Education and Employment</p>
-        <div className="user_personal">
-          {EDUCATION?.map((item, i) => (
-            <div key={i}>
-              <p className="head">{item?.head}</p>
-              {item?.head === 'MONTHLY INCOME' ? (
-                <p className="desc">
-                  <span>&#8358;</span>
-                  {item?.desc1}- <span>&#8358;</span>
-                  {item?.desc2}
-                </p>
-              ) : (
+        <div className="info">
+          <p className="personal">Personal Information</p>
+          <div className="user_personal">
+            {PERSONALDETAILS?.map((item, i) => (
+              <div key={i}>
+                <p className="head">{item?.head}</p>
                 <p className="desc">{item?.desc}</p>
-              )}
-            </div>
-          ))}
-        </div>
-        <p className="personal pad">Socials</p>
-        <div className="user_personal">
-          {SOCIALS?.map((item, i) => (
-            <div key={i}>
-              <p className="head">{item?.head}</p>
-              <p className="desc">{item?.desc}</p>
-            </div>
-          ))}
-        </div>
-        <p className="personal pad">Guarantor</p>
-        <div className="user_personal2">
-          {GUARANTOR?.map((item, i) => (
-            <div key={i}>
-              <p className="head">{item?.head}</p>
-              <p className="desc">{item?.desc}</p>
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
+          <p className="personal pad">Education and Employment</p>
+          <div className="user_personal">
+            {EDUCATION?.map((item, i) => (
+              <div key={i}>
+                <p className="head">{item?.head}</p>
+                {item?.head === 'MONTHLY INCOME' ? (
+                  <p className="desc">
+                    <span>&#8358;</span>
+                    {item?.desc1}- <span>&#8358;</span>
+                    {item?.desc2}
+                  </p>
+                ) : (
+                  <p className="desc">{item?.desc}</p>
+                )}
+              </div>
+            ))}
+          </div>
+          <p className="personal pad">Socials</p>
+          <div className="user_personal">
+            {SOCIALS?.map((item, i) => (
+              <div key={i}>
+                <p className="head">{item?.head}</p>
+                <p className="desc">{item?.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="personal pad">Guarantor</p>
+          <div className="user_personal2">
+            {GUARANTOR?.map((item, i) => (
+              <div key={i}>
+                <p className="head">{item?.head}</p>
+                <p className="desc">{item?.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
