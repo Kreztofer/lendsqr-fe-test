@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './users.scss';
 import { HEADING, USERS, MODAL } from '../../constants';
 import dots from '../../assets/dots.png';
@@ -26,6 +26,25 @@ const Users = (datax: props) => {
   const [currentItems, setCurrentItems] = useState<UserObj[]>([]);
   const itemsPerPage = 10;
 
+  const [userStatus, setUserStatus] = useState([
+    'Blacklisted',
+    'Active',
+    'Inactive',
+    'pending',
+    'Active',
+    'pending',
+    'Inactive',
+    'Blacklisted',
+    'pending',
+    'Active',
+  ]);
+
+  const changeStatus = (pos: any, newStatus: any) => {
+    let newStatusList = [...userStatus];
+    newStatusList[pos] = newStatus;
+    setUserStatus(newStatusList);
+  };
+
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(datax?.datax.slice(itemOffset, endOffset));
@@ -50,7 +69,14 @@ const Users = (datax: props) => {
     });
   };
 
-  const handleModalSelect = (value: string, myid: string) => {
+  const handleModalSelect = (
+    value: string,
+    myid: string,
+    name: any,
+    pos: any
+  ) => {
+    changeStatus(pos, name);
+
     if (value === 'View Details') {
       navigate(`users/${id}`);
     } else if (value === 'Blacklist User' && myid === id) {
@@ -97,7 +123,7 @@ const Users = (datax: props) => {
               </tr>
             </thead>
             <tbody>
-              {currentItems?.map((item) => (
+              {currentItems?.map((item, index) => (
                 <tr
                   key={item?.id}
                   onClick={() => navigate(`users/${item?.userName}`)}
@@ -107,7 +133,16 @@ const Users = (datax: props) => {
                   <td>{item?.email}</td>
                   <td>{item?.phoneNumber}</td>
                   <td>{DateConverter(item?.createdAt)}</td>
-                  <td className={`${statusStyle}`}>{status}</td>
+                  <td
+                    className={`${
+                      userStatus[index] === 'Blacklisted' ? 'blacklist' : ''
+                    } 
+                    ${userStatus[index] === 'Active' ? 'active' : ''}
+                    ${userStatus[index] === 'Inactive' ? 'inactive' : ''}
+                    ${userStatus[index] === 'pending' ? 'pending' : ''}`}
+                  >
+                    {userStatus[index]}
+                  </td>
                   <td
                     className="modal_dots"
                     onClick={(e) => handleDotsClick(e, item?.userName)}
@@ -124,7 +159,12 @@ const Users = (datax: props) => {
                         <div
                           className="modal_items"
                           onClick={() =>
-                            handleModalSelect(value?.desc, item?.userName)
+                            handleModalSelect(
+                              value?.desc,
+                              item?.userName,
+                              value?.name,
+                              index
+                            )
                           }
                           key={value.id}
                         >

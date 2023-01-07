@@ -103,7 +103,7 @@
     color: rgba(233, 178, 0, 1);
     background-color: rgba(233, 178, 0, 0.1);
     margin-right: 15px;
-    padding: 10px 15px 10px 19px;
+    padding: 10px 40px;
     margin-top: 4px;
     border-radius: 50px;
     display: flex;
@@ -113,7 +113,7 @@
     color: rgba(228, 3, 59, 1);
     background-color: rgba(228, 3, 59, 0.1);
     margin-right: 15px;
-    padding: 10px 14px 10px 20px;
+    padding: 10px 0px 10px 33px;
     margin-top: 4px;
     border-radius: 50px;
     display: flex;
@@ -122,7 +122,7 @@
     color: rgba(57, 205, 98, 1);
     background-color: rgba(57, 205, 98, 0.1);
     margin-right: 15px;
-    padding: 10px 20px;
+    padding: 10px 0px 10px 50px;
     margin-top: 4px;
     border-radius: 50px;
     display: flex;
@@ -131,7 +131,7 @@
     color: rgba(84, 95, 125, 1);
     background-color: rgba(84, 95, 125, 0.1);
     margin-right: 15px;
-    padding: 10px 20px;
+    padding: 10px 0px 10px 45px;
     margin-top: 4px;
     border-radius: 50px;
     display: flex;
@@ -216,6 +216,18 @@
         align-items: flex-start;
         margin-top: 30px;
       }
+    }
+    .content-table td.pending {
+      margin-top: 30px;
+    }
+    .content-table td.blacklist {
+      margin-top: 30px;
+    }
+    .content-table td.active {
+      margin-top: 30px;
+    }
+    .content-table td.inactive {
+      margin-top: 30px;
     }
   }
   @media screen and (max-width: 600px) {

@@ -243,21 +243,25 @@ export const MODAL = [
   {
     id: 1,
     desc: 'View Details',
+    name: 'null',
     cover: modal1,
   },
   {
     id: 2,
     desc: 'Blacklist User',
+    name: 'Blacklisted',
     cover: modal2,
   },
   {
     id: 3,
     desc: 'Activate User',
+    name: 'Active',
     cover: modal3,
   },
   {
     id: 4,
-    desc: 'Unactivate User',
+    desc: 'Deactivate User',
+    name: 'Inactive',
     cover: modal4,
   },
 ];
