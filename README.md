@@ -30,4 +30,4 @@ List of all users is shown and filtered to display 10 out of 100 items, other us
 
 ###### UsersDetails page
 
-In this page, the data of an individual item is displayed
+In this page, the data of an individual item is displayed.
