@@ -31,3 +31,5 @@ List of all users is shown and filtered to display 10 out of 100 items, other us
 ###### UsersDetails page
 
 In this page, the data of an individual item is displayed.
+
+![screenshot](https://user-images.githubusercontent.com/94160549/211520323-d587a146-dad2-4198-96c0-1ab456601cfe.png)
